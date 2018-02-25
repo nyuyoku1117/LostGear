@@ -93,7 +93,7 @@
      <Compile Include="Assets\scripts\TweenAlphaSprite.cs" />
      <Compile Include="Assets\SingletonMonoBehavior.cs" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/のん/Desktop/LostGear/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>C:/Users/のん/Documents/Github/LostGear/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -177,7 +177,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="LitJson">
- <HintPath>C:/Users/のん/Desktop/LostGear/Assets/Plugins/LitJson.dll</HintPath>
+ <HintPath>C:/Users/のん/Documents/Github/LostGear/Assets/Plugins/LitJson.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/のん/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
