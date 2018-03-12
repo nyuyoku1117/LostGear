@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Stages/Stage2.unity
+- path: Assets/scripts/UniGif/Example/UniGifExample.unity
   isLoaded: 1
   isActive: 1
