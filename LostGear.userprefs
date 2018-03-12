@@ -1,14 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\FadeManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Controller\PlayerControler.cs">
     <Files>
-      <File FileName="Assets\scripts\Controller\PlayerControler.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Controller\PlayerControler.cs" Line="94" Column="45" />
       <File FileName="Assets\scripts\Controller\LiftController.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Controller\RobotController.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Controller\SwitchController.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Controller\PlayerSearch.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Controller\BridgeController.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\FadeManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\TextController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

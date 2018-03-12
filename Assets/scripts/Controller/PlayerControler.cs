@@ -92,8 +92,8 @@ public class PlayerControler : MonoBehaviour
         if (isGrounded == false)
         {
             isGrounded = Physics2D.Linecast(
-                transform.position + transform.up * 0.002f,
-                transform.position - transform.up * 0.002f,
+                transform.position + transform.up * 0.02f,
+                transform.position - transform.up * 0.02f,
                 groundLayer);
         }
 
