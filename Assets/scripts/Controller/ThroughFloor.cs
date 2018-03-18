@@ -6,9 +6,21 @@ public class ThroughFloor : MonoBehaviour {
 	public PlayerControler PC;
     public BoxCollider2D ChildBoxCollider;
 
+	public bool Xmove = false;
+	public bool Ymove = false;
+
+	public float XmoveRange;
+	public float YmoveRange;
+
+	public float XmoveSpeed;
+	public float YmoveSpeed;
+
+	private float MoveTime;
+
     // Use this for initialization
     void Start () {
         ChildBoxCollider = this.GetComponent<BoxCollider2D>();
+	
 	}
 	
 	// Update is called once per frame
@@ -19,6 +31,7 @@ public class ThroughFloor : MonoBehaviour {
 		} else {
             ChildBoxCollider.enabled = false;
 		}
+
 
 	}
 }
