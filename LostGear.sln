@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostGear", "Assembly-CSharp.csproj", "{800B7CAC-D7D2-C251-716B-146479DC2288}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LostGear", "Assembly-CSharp-firstpass.csproj", "{DEC11FEC-ADC3-B69C-1EA4-AC03A1FFF2A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{800B7CAC-D7D2-C251-716B-146479DC2288}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{800B7CAC-D7D2-C251-716B-146479DC2288}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{800B7CAC-D7D2-C251-716B-146479DC2288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEC11FEC-ADC3-B69C-1EA4-AC03A1FFF2A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEC11FEC-ADC3-B69C-1EA4-AC03A1FFF2A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEC11FEC-ADC3-B69C-1EA4-AC03A1FFF2A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEC11FEC-ADC3-B69C-1EA4-AC03A1FFF2A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
