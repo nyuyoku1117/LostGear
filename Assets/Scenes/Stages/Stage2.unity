@@ -1582,6 +1582,11 @@ Prefab:
       propertyPath: isLifted
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114736277863368716, guid: f6ba62bd595dffb4cb3088b42ad40c74,
+        type: 2}
+      propertyPath: player
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: f6ba62bd595dffb4cb3088b42ad40c74, type: 2}
@@ -3315,15 +3320,15 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1757512092}
-  - {fileID: 459980392}
-  - {fileID: 2133405892}
   - {fileID: 1582583420}
   - {fileID: 163536102}
   - {fileID: 1682968312}
   - {fileID: 844263900}
   - {fileID: 1933876999}
   - {fileID: 1248128213}
+  - {fileID: 1757512092}
+  - {fileID: 459980392}
+  - {fileID: 2133405892}
   m_Father: {fileID: 1422079092}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3914,7 +3919,7 @@ MonoBehaviour:
   isLifted: 0
   isGotten: 0
   foot: {fileID: 1698606320}
-  player: 0
+  player: 1
   direction: {x: 1, y: 0}
   mask:
     serializedVersion: 2

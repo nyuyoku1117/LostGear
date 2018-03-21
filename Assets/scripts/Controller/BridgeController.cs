@@ -17,7 +17,7 @@ public class BridgeController : MonoBehaviour {
 	// Update is called once per frame
 	public void BridgeAction() {
 
-		this.transform.rotation = Quaternion.Euler (0, 0, 0);
+		iTween.RotateBy (this.gameObject, iTween.Hash("z",-0.25,"time",3));
 		Debug.Log ("Bridge_Action!");
 		BridgeActionFlag = true;
 

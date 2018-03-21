@@ -220,3 +220,4 @@ C:\Users\のん\Documents\Github\LostGear\Temp\bin\Debug\UnityEditor.iOS.Extensi
 C:\Users\のん\Documents\Github\LostGear\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\のん\Documents\Github\LostGear\obj\Debug\Assembly-CSharp.dll
 C:\Users\のん\Documents\Github\LostGear\obj\Debug\Assembly-CSharp.pdb
+C:\Users\のん\Documents\Github\LostGear\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
