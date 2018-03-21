@@ -58,6 +58,7 @@
      <Compile Include="Assets\Savedata.cs" />
      <Compile Include="Assets\scripts\Controller\BridgeController.cs" />
      <Compile Include="Assets\scripts\Controller\CameraController.cs" />
+     <Compile Include="Assets\scripts\Controller\Camp_nightController.cs" />
      <Compile Include="Assets\scripts\Controller\GateContoller.cs" />
      <Compile Include="Assets\scripts\Controller\Goal.cs" />
      <Compile Include="Assets\scripts\Controller\HashigoController.cs" />
