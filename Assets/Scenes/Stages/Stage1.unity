@@ -10363,6 +10363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lift:
   - {fileID: 419933173}
+  arrow: {fileID: 0}
 --- !u!61 &365632125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12215,6 +12216,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 1743283516}
   ChildBoxCollider: {fileID: 0}
+  Xmove: 0
+  Ymove: 0
+  XmoveRange: 0
+  YmoveRange: 0
+  XmoveSpeed: 0
+  YmoveSpeed: 0
 --- !u!1001 &422520283
 Prefab:
   m_ObjectHideFlags: 0
@@ -13506,6 +13513,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 1743283516}
   ChildBoxCollider: {fileID: 0}
+  Xmove: 0
+  Ymove: 0
+  XmoveRange: 0
+  YmoveRange: 0
+  XmoveSpeed: 0
+  YmoveSpeed: 0
 --- !u!4 &466343150 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4991598092561398, guid: 19a04fd3162d4924db5de1b78fbe8233,
@@ -14050,6 +14063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lift:
   - {fileID: 834097079}
+  arrow: {fileID: 0}
 --- !u!61 &488295412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16183,6 +16197,7 @@ MonoBehaviour:
   Balloon: {fileID: 1373604844}
   obj: {fileID: 0}
   PC: {fileID: 1743283516}
+  Gareki: {fileID: 0}
   plessureFlag: 0
   water: {fileID: 1482518973}
   waterType: 0
@@ -21380,6 +21395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lift:
   - {fileID: 1114332120}
+  arrow: {fileID: 1147685542250722, guid: 54ccbfb8eaab5e74f8a06650b86d4b14, type: 2}
 --- !u!1001 &715182976
 Prefab:
   m_ObjectHideFlags: 0
@@ -24727,6 +24743,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 1743283516}
   ChildBoxCollider: {fileID: 0}
+  Xmove: 0
+  Ymove: 0
+  XmoveRange: 0
+  YmoveRange: 0
+  XmoveSpeed: 0
+  YmoveSpeed: 0
 --- !u!1001 &835881846
 Prefab:
   m_ObjectHideFlags: 0
@@ -28256,6 +28278,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 1743283516}
   ChildBoxCollider: {fileID: 0}
+  Xmove: 0
+  Ymove: 0
+  XmoveRange: 0
+  YmoveRange: 0
+  XmoveSpeed: 0
+  YmoveSpeed: 0
 --- !u!1001 &962321301
 Prefab:
   m_ObjectHideFlags: 0
@@ -29039,6 +29067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lift:
   - {fileID: 2030897890}
+  arrow: {fileID: 0}
 --- !u!61 &991133907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32591,6 +32620,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 1743283516}
   ChildBoxCollider: {fileID: 0}
+  Xmove: 0
+  Ymove: 0
+  XmoveRange: 0
+  YmoveRange: 0
+  XmoveSpeed: 0
+  YmoveSpeed: 0
 --- !u!1001 &1121240472
 Prefab:
   m_ObjectHideFlags: 0
@@ -34553,6 +34588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lift:
   - {fileID: 1735120860}
+  arrow: {fileID: 0}
 --- !u!61 &1200654985
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38648,6 +38684,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 1743283516}
   ChildBoxCollider: {fileID: 0}
+  Xmove: 0
+  Ymove: 0
+  XmoveRange: 0
+  YmoveRange: 0
+  XmoveSpeed: 0
+  YmoveSpeed: 0
 --- !u!1001 &1346634978
 Prefab:
   m_ObjectHideFlags: 0
@@ -40041,6 +40083,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 1743283516}
   ChildBoxCollider: {fileID: 0}
+  Xmove: 0
+  Ymove: 0
+  XmoveRange: 0
+  YmoveRange: 0
+  XmoveSpeed: 0
+  YmoveSpeed: 0
 --- !u!1 &1380412364
 GameObject:
   m_ObjectHideFlags: 0
@@ -41595,6 +41643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lift:
   - {fileID: 1924149213}
+  arrow: {fileID: 0}
 --- !u!61 &1426379934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42170,6 +42219,24 @@ Prefab:
       propertyPath: mask.m_Bits
       value: 256
       objectReference: {fileID: 0}
+    - target: {fileID: 114736277863368716, guid: f6ba62bd595dffb4cb3088b42ad40c74,
+        type: 2}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 1147685542250722, guid: 54ccbfb8eaab5e74f8a06650b86d4b14,
+        type: 2}
+    - target: {fileID: 114736277863368716, guid: f6ba62bd595dffb4cb3088b42ad40c74,
+        type: 2}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 1962721921388908, guid: 74f6852f85a35a14291e3f8ea900ce0c,
+        type: 2}
+    - target: {fileID: 114736277863368716, guid: f6ba62bd595dffb4cb3088b42ad40c74,
+        type: 2}
+      propertyPath: MenuUI
+      value: 
+      objectReference: {fileID: 1996570815275070, guid: 931763effe2698a48bbf334d732b7dd6,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: f6ba62bd595dffb4cb3088b42ad40c74, type: 2}
@@ -47011,6 +47078,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 1743283516}
   ChildBoxCollider: {fileID: 0}
+  Xmove: 0
+  Ymove: 0
+  XmoveRange: 0
+  YmoveRange: 0
+  XmoveSpeed: 0
+  YmoveSpeed: 0
 --- !u!4 &1620623370 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4991598092561398, guid: 19a04fd3162d4924db5de1b78fbe8233,
@@ -48596,6 +48669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lift:
   - {fileID: 2006145916}
+  arrow: {fileID: 0}
 --- !u!61 &1681357726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49512,6 +49586,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 1743283516}
   ChildBoxCollider: {fileID: 0}
+  Xmove: 0
+  Ymove: 0
+  XmoveRange: 0
+  YmoveRange: 0
+  XmoveSpeed: 0
+  YmoveSpeed: 0
 --- !u!1001 &1700661792
 Prefab:
   m_ObjectHideFlags: 0
@@ -50535,6 +50615,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 1743283516}
   ChildBoxCollider: {fileID: 0}
+  Xmove: 0
+  Ymove: 0
+  XmoveRange: 0
+  YmoveRange: 0
+  XmoveSpeed: 0
+  YmoveSpeed: 0
 --- !u!1001 &1735188488
 Prefab:
   m_ObjectHideFlags: 0
@@ -50953,6 +51039,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b80afb31d9fc28c41aa40289a470ccff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_Active: 0
+  menu_Active: 0
+  MenuUI: {fileID: 1996570815275070, guid: 931763effe2698a48bbf334d732b7dd6, type: 2}
   anim: {fileID: 0}
   WalkSpeed: 3
   groundLayer:
@@ -56055,6 +56144,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 1743283516}
   ChildBoxCollider: {fileID: 0}
+  Xmove: 0
+  Ymove: 0
+  XmoveRange: 0
+  YmoveRange: 0
+  XmoveSpeed: 0
+  YmoveSpeed: 0
 --- !u!1001 &1925049408
 Prefab:
   m_ObjectHideFlags: 0
@@ -56394,6 +56489,7 @@ MonoBehaviour:
   Lift:
   - {fileID: 764214803}
   - {fileID: 1076444674}
+  arrow: {fileID: 1147685542250722, guid: 54ccbfb8eaab5e74f8a06650b86d4b14, type: 2}
 --- !u!61 &1931134741
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63520,6 +63616,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 1743283516}
   ChildBoxCollider: {fileID: 0}
+  Xmove: 0
+  Ymove: 0
+  XmoveRange: 0
+  YmoveRange: 0
+  XmoveSpeed: 0
+  YmoveSpeed: 0
 --- !u!1001 &2071046025
 Prefab:
   m_ObjectHideFlags: 0
@@ -64639,6 +64741,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 1743283516}
   ChildBoxCollider: {fileID: 0}
+  Xmove: 0
+  Ymove: 0
+  XmoveRange: 0
+  YmoveRange: 0
+  XmoveSpeed: 0
+  YmoveSpeed: 0
 --- !u!1001 &2101781338
 Prefab:
   m_ObjectHideFlags: 0
@@ -65900,6 +66008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lift:
   - {fileID: 1019630223}
+  arrow: {fileID: 1147685542250722, guid: 54ccbfb8eaab5e74f8a06650b86d4b14, type: 2}
 --- !u!61 &2136708536
 BoxCollider2D:
   m_ObjectHideFlags: 0

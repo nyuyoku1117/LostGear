@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwitchController : MonoBehaviour {
 
     public LiftController[] Lift;
+	public GameObject arrow;
 
     private int LiftNum;
     // Use this for initialization
@@ -23,10 +24,34 @@ public class SwitchController : MonoBehaviour {
             if (Lift[i].LiftFlag == false)
             {
                 Lift[i].LiftFlag = true;
+
+				var heading = Lift [i].transform.position - this.transform.position;
+				var distance = heading.magnitude;
+				var direction = heading / distance;
+				var CurrentDirection = direction * 2;
+
+				var diff = (Lift[i].transform.position - transform.position ).normalized;
+				var rote = Quaternion.FromToRotation( Vector3.up,  diff);
+
+				Instantiate (arrow, CurrentDirection + this.transform.position, rote);
+
+
             }
             else
             {
                 Lift[i].LiftFlag = false;
+
+				var heading = Lift [i].transform.position - this.transform.position;
+				var distance = heading.magnitude;
+				var direction = heading / distance;
+				var CurrentDirection = direction * 2;
+
+				var diff = (Lift[i].transform.position - transform.position ).normalized;
+				var rote = Quaternion.FromToRotation( Vector3.up,  diff);
+
+				Instantiate (arrow, CurrentDirection + this.transform.position, rote);
+
+
             }
         }
     }
