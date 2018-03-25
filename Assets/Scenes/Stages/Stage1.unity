@@ -10206,6 +10206,11 @@ Prefab:
       propertyPath: m_Name
       value: key
       objectReference: {fileID: 0}
+    - target: {fileID: 114685809034762704, guid: a4cddb4523dcf444f9f6c18a2db45181,
+        type: 2}
+      propertyPath: open
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4cddb4523dcf444f9f6c18a2db45181, type: 2}
   m_IsPrefabParent: 0
@@ -12083,6 +12088,7 @@ MonoBehaviour:
   XLift: 0
   YLift: 1
   LiftFlag: 0
+  startFlag: 0
   lifttype: 2
 --- !u!50 &419933174
 Rigidbody2D:
@@ -16183,6 +16189,7 @@ MonoBehaviour:
   Balloon: {fileID: 1373604844}
   obj: {fileID: 0}
   PC: {fileID: 1743283516}
+  Gareki: {fileID: 0}
   plessureFlag: 0
   water: {fileID: 1482518973}
   waterType: 0
@@ -24647,6 +24654,7 @@ MonoBehaviour:
   XLift: 0
   YLift: 1
   LiftFlag: 0
+  startFlag: 0
   lifttype: 2
 --- !u!50 &834097080
 Rigidbody2D:
@@ -32262,6 +32270,7 @@ MonoBehaviour:
   XLift: 0
   YLift: 1
   LiftFlag: 1
+  startFlag: 0
   lifttype: 3
 --- !u!1001 &1116644782
 Prefab:
@@ -32511,6 +32520,7 @@ MonoBehaviour:
   XLift: 0
   YLift: 1
   LiftFlag: 1
+  startFlag: 0
   lifttype: 3
 --- !u!50 &1121092533
 Rigidbody2D:
@@ -50455,6 +50465,7 @@ MonoBehaviour:
   XLift: 0
   YLift: 1
   LiftFlag: 0
+  startFlag: 0
   lifttype: 2
 --- !u!50 &1735120861
 Rigidbody2D:
@@ -55975,6 +55986,7 @@ MonoBehaviour:
   XLift: 0
   YLift: 1
   LiftFlag: 0
+  startFlag: 0
   lifttype: 3
 --- !u!50 &1924149214
 Rigidbody2D:
@@ -58239,6 +58251,7 @@ MonoBehaviour:
   XLift: 0
   YLift: 1
   LiftFlag: 0
+  startFlag: 0
   lifttype: 3
 --- !u!1001 &2007112783
 Prefab:
@@ -59008,6 +59021,7 @@ MonoBehaviour:
   XLift: 0
   YLift: 1
   LiftFlag: 0
+  startFlag: 0
   lifttype: 3
 --- !u!4 &2032855299 stripped
 Transform:

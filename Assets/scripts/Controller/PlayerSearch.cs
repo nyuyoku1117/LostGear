@@ -16,7 +16,6 @@ public class PlayerSearch : MonoBehaviour {
     public GameObject Balloon;
     public GameObject obj;
     public PlayerControler PC;
-    public GameObject Gareki;
 
     public bool plessureFlag;
 
@@ -51,7 +50,7 @@ public class PlayerSearch : MonoBehaviour {
                 {
                     SwitchController Switch = obj.gameObject.GetComponent<SwitchController>();
                     Switch.TurnSwitch();
-                    Gareki.SetActive(false);
+                    obj.SetActive(false);
                 }
                 else if (BridgeFlag == true)
                 {
@@ -136,7 +135,7 @@ public class PlayerSearch : MonoBehaviour {
                 obj = other.gameObject;
             }
         }
-        if (other.tag == "rock" && PC.player == PlayerControler.playerType.Dola)
+        if (other.tag == "rock"&& PC.player == PlayerControler.playerType.Dola)
         {
             CollisionFlag = true;
             RockFlag = true;

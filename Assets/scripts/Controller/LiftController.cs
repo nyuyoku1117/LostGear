@@ -31,15 +31,34 @@ public class LiftController : MonoBehaviour
     private float end_y;
     private GameObject player;
 
+    public bool startFlag;
+
     public LiftType lifttype = LiftType.OneWay;
 
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
         plessured = false;
         rigidbody2D = GetComponent<Rigidbody2D>();
         Vector2 start = rigidbody2D.transform.position;
-        end_x = start.x;
-        end_y = start.y;
+        if (startFlag == true)
+        {
+            if (XLift == true)
+            {
+                end_x = LiftStartPosition;
+                end_y = start.y;
+            }
+            else
+            {
+                end_y = LiftStartPosition;
+                end_x = start.x;
+            }
+        }
+        else
+        {
+            end_x = start.x;
+            end_y = start.y;
+        }
     }
 
     // Update is called once per frame
