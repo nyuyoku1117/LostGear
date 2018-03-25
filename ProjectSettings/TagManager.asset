@@ -11,6 +11,7 @@ TagManager:
   - Hashigo
   - switch_Gareki
   - Bridge
+  - Map
   layers:
   - Default
   - TransparentFX

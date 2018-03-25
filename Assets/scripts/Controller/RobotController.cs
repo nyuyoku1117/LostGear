@@ -41,7 +41,7 @@ public class RobotController : MonoBehaviour {
 			if (hitToPlayer.collider.gameObject.tag != "Player") {
 
 				Alert = false;
-				Debug.Log ("NonRayCast");
+				//Debug.Log ("NonRayCast");
 
 
 			} else if (hitToPlayer.collider.gameObject.tag == "Player") {

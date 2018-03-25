@@ -8,7 +8,7 @@ public class PlayerControler : MonoBehaviour
 	public bool menu_Active = false;
 
 	[SerializeField]
-	private GameObject MenuUI;
+	public GameObject MenuUI;
 	private GameObject instanceMenuUI;
 
     private Rigidbody2D rigidbody2D;
@@ -50,6 +50,18 @@ public class PlayerControler : MonoBehaviour
     public Vector2 direction = new Vector2(1.0f, 0.0f);
     public LayerMask mask;
     public float RayRangeToFoot;
+
+	private int currentMENUpointa = 1;
+	float waittime = 0;
+	private bool moveflag = true;
+	public GameObject MENUPointa;
+	private bool MapFlag = false;
+	private bool ArrowFlag = true;
+
+
+	public bool[] Map1;
+
+
 
     // Use this for initialization
     void Start()
@@ -106,16 +118,20 @@ public class PlayerControler : MonoBehaviour
 
 				anim.SetBool ("Walk", false);
 
-				if (instanceMenuUI == null) {
-				instanceMenuUI = GameObject.Instantiate (MenuUI) as GameObject;
-				}
+				//if (instanceMenuUI == null) {
+				
+					//instanceMenuUI = GameObject.Instantiate (MenuUI) as GameObject;
+				MenuUI.gameObject.SetActive(true);
+
+				//}
 				Debug.Log ("MENUOPEN");
 			
 			} else {
 
 				player_Active = true;
 				menu_Active = false;
-				Destroy (instanceMenuUI);
+				MenuUI.gameObject.SetActive (false);
+				//Destroy (instanceMenuUI);
 				Debug.Log ("MENUCLOSE");
 
 			}
@@ -255,18 +271,105 @@ public class PlayerControler : MonoBehaviour
 			}
 		} else {
 
+			//MENU画面操作
 			if (menu_Active) {
 
+				if (moveflag == false) {
+
+					waittime += Time.deltaTime;
+
+				}
+
+				if (waittime > 1.5) {
+					moveflag = true;
+					waittime = 0;
+				}
+
+				if (ArrowFlag) {
+					if (Input.GetKeyDown (KeyCode.DownArrow)) {
+
+						if (currentMENUpointa != 4) {
+							if (moveflag) {
+								currentMENUpointa += 1;
+								Debug.Log (currentMENUpointa);
+								iTween.MoveBy (MENUPointa.gameObject, iTween.Hash ("y", -50));
+								moveflag = false;
+							}
+						}
+					}
+
+					if (Input.GetKeyDown (KeyCode.UpArrow)) {
+
+						if (currentMENUpointa != 1) {
+							if (moveflag) {
+								currentMENUpointa -= 1;
+								Debug.Log (currentMENUpointa);
+								iTween.MoveBy (MENUPointa.gameObject, iTween.Hash ("y", 50f));
+								moveflag = false;
+							}
+						}
+					}
+				}
+
+				if (currentMENUpointa == 1) {
+
+					if (Input.GetKeyDown (KeyCode.Z)) {
+						
+						if (MapFlag == false) {
 
 
+							ArrowFlag = false;
+							Debug.Log ("MAP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+							MapFlag = true;
+
+							//MAPShow
+
+							for (int i = 0; i < 20; i++) {
+
+								if (Map1[i] == true) {
+
+
+									
+								}
+
+
+							}
+
+
+
+
+
+						} else {
+
+							ArrowFlag = true;
+							Debug.Log ("MAPBREAK!!!!!!!!!!!!!!!!!!!!!!!!!!");
+							MapFlag = false;
+							//MAPDELETE
+
+						}
+					}
+
+				} else if (currentMENUpointa == 2) {
+
+
+
+				} else if (currentMENUpointa == 3) {
+
+
+
+				} else if (currentMENUpointa == 4) {
+
+
+
+				}
 
 
 			}
 
-
-
 		}
+
 	}
+
 
     void OnTriggerStay2D(Collider2D collision)
     {
@@ -306,4 +409,15 @@ public class PlayerControler : MonoBehaviour
         }
     }
 
+	void OnTriggerEnter2D(Collider2D col){
+
+		for (int i = 0; i < 20; i++) {
+			
+			if (col.gameObject.name == "Area" + i+1) {
+				Map1 [i] = true;
+			}
+
+
+		}
+	}
 }
