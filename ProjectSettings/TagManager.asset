@@ -3,15 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - lift
-  - key
-  - switch
-  - rock
-  - Hashigo
-  - switch_Gareki
-  - Bridge
-  - door
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -21,11 +13,6 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
-  - goal
-  - player
-  - lift
-  - NotDropZone
   - 
   - 
   - 
@@ -43,12 +30,14 @@ TagManager:
   - 
   - 
   - 
-  - Front
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Front
-    uniqueID: 3145187207
     locked: 0
