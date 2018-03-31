@@ -12,6 +12,7 @@ public class PlayerSearch : MonoBehaviour {
     private bool keyFlag;
     private bool Switch_GarekiFlag;
     private bool BridgeFlag;
+    private bool doorFlag;
 
     public GameObject Balloon;
     public GameObject obj;
@@ -67,6 +68,11 @@ public class PlayerSearch : MonoBehaviour {
                     {
                         PC.player = PlayerControler.playerType.Ed;
                     }
+                }
+                else if (doorFlag == true)
+                {
+                    doorController dc = obj.gameObject.GetComponent<doorController>();
+                    dc.Moving();
                 }
                 else if (waterFlag == true)
                 {
@@ -166,6 +172,12 @@ public class PlayerSearch : MonoBehaviour {
             KC = other.GetComponent<KeyContoller>();
             keyFlag = true;
         }
+        if (other.gameObject.tag == "door")
+        {
+            CollisionFlag = true;
+            doorFlag = true;
+            obj = other.gameObject;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -208,6 +220,11 @@ public class PlayerSearch : MonoBehaviour {
         {
             CollisionFlag = false;
             keyFlag = false;
+        }
+        if (collision.gameObject.tag == "door")
+        {
+            CollisionFlag = false;
+            doorFlag = false;
         }
     }
 }
