@@ -11,7 +11,11 @@ TagManager:
   - Hashigo
   - switch_Gareki
   - Bridge
+<<<<<<< HEAD
   - door
+=======
+  - Map
+>>>>>>> origin/master
   layers:
   - Default
   - TransparentFX
