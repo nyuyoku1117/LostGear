@@ -58,8 +58,15 @@ public class PlayerControler : MonoBehaviour
 	private bool MapFlag = false;
 	private bool ArrowFlag = true;
 
-
-	public bool[] Map1;
+	public GameObject[] MAP1Pictures;
+	public bool[] Map1flag;
+	public Vector3[] Map1_position;
+	public GameObject canvas;
+	public GameObject[] MAP1;
+	public RectTransform firstMenuPointa;
+	private float mapscroll = 0;
+	//canvas上の一番上にくるものを指定する際のindex用
+	public GameObject CanvasFrontObject;
 
 
 
@@ -71,6 +78,19 @@ public class PlayerControler : MonoBehaviour
         GObj = GameObject.Find("Lift");
         anim = GetComponent<Animator>();
         rigidbody2D = GetComponent<Rigidbody2D>();
+
+		//Map1_11 Start
+		for (int i = 0; i < 20; i++) {
+			//Map1flag [i] = false;
+			if (i < 10) {
+				Map1_position [i] = new Vector3 (-150 + (i) * 100, 50, 0);
+			} else {
+				Map1_position [i] = new Vector3 (-150 + (i - 10) * 100, -50, 0);
+			}
+		}
+
+		Map1flag [10] = true;
+		//マップのセーブデータ読み込み
     }
 
     // Update is called once per frame
@@ -130,6 +150,19 @@ public class PlayerControler : MonoBehaviour
 
 				player_Active = true;
 				menu_Active = false;
+				MapFlag = false;
+				ArrowFlag = true;
+				currentMENUpointa = 1;
+				firstMenuPointa.localPosition = new Vector3 (0.92f, 80, 0); 
+				//MENUPointa.transform.position = RectTransformUtility.WorldToScreenPoint (Camera.main, new Vector3 (0, 0, 0));
+				for(int i=0;i<20;i++){
+					if(Map1flag[i] == true){
+
+						Destroy(MAP1[i]);
+
+						//MAPDELETE
+					}
+				}
 				MenuUI.gameObject.SetActive (false);
 				//Destroy (instanceMenuUI);
 				Debug.Log ("MENUCLOSE");
@@ -311,6 +344,24 @@ public class PlayerControler : MonoBehaviour
 					}
 				}
 
+				if (MapFlag) {
+
+					float x = Input.GetAxisRaw ("Horizontal");
+					if (x != 0) {
+						
+						for (int i = 0; i < 20; i++) {
+							if (Map1flag [i]) {
+								iTween.MoveBy (MAP1 [i], iTween.Hash ("x", x * (-65f), "Time", 0.2f));
+							}
+						}
+					}
+
+
+
+
+
+				}
+
 				if (currentMENUpointa == 1) {
 
 					if (Input.GetKeyDown (KeyCode.Z)) {
@@ -326,10 +377,13 @@ public class PlayerControler : MonoBehaviour
 
 							for (int i = 0; i < 20; i++) {
 
-								if (Map1[i] == true) {
+								if (Map1flag[i] == true) {
 
-
-									
+									var rote = Quaternion.AngleAxis (0, new Vector3(0,0,0));
+									MAP1[i] = Instantiate (MAP1Pictures[i], Map1_position [i], rote) as GameObject;
+									//MAP1[i].transform.position = RectTransformUtility.WorldToScreenPoint (Camera.main, new Vector3 (0, 0, 0));
+									MAP1[i].transform.SetParent (canvas.transform, false);
+									MAP1 [i].transform.SetSiblingIndex (CanvasFrontObject.transform.GetSiblingIndex() + 1);
 								}
 
 
@@ -342,10 +396,20 @@ public class PlayerControler : MonoBehaviour
 						} else {
 
 							ArrowFlag = true;
+
+
+
 							Debug.Log ("MAPBREAK!!!!!!!!!!!!!!!!!!!!!!!!!!");
 							MapFlag = false;
-							//MAPDELETE
 
+							for(int i=0;i<20;i++){
+								if(Map1flag[i] == true){
+								
+									Destroy(MAP1[i]);
+								
+									//MAPDELETE
+								}
+							}
 						}
 					}
 
@@ -413,8 +477,9 @@ public class PlayerControler : MonoBehaviour
 
 		for (int i = 0; i < 20; i++) {
 			
-			if (col.gameObject.name == "Area" + i+1) {
-				Map1 [i] = true;
+			if (col.gameObject.name == "Area" + (i+1)) {
+				Map1flag [i] = true;
+				Debug.Log ("Area" + (i+1) + "OPEN!");
 			}
 
 
