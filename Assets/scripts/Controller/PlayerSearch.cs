@@ -12,11 +12,11 @@ public class PlayerSearch : MonoBehaviour {
     private bool keyFlag;
     private bool Switch_GarekiFlag;
     private bool BridgeFlag;
+    private bool doorFlag;
 
     public GameObject Balloon;
     public GameObject obj;
     public PlayerControler PC;
-    public GameObject Gareki;
 
     public bool plessureFlag;
 
@@ -51,7 +51,7 @@ public class PlayerSearch : MonoBehaviour {
                 {
                     SwitchController Switch = obj.gameObject.GetComponent<SwitchController>();
                     Switch.TurnSwitch();
-                    Gareki.SetActive(false);
+                    obj.SetActive(false);
                 }
                 else if (BridgeFlag == true)
                 {
@@ -68,6 +68,11 @@ public class PlayerSearch : MonoBehaviour {
                     {
                         PC.player = PlayerControler.playerType.Ed;
                     }
+                }
+                else if (doorFlag == true)
+                {
+                    doorController dc = obj.gameObject.GetComponent<doorController>();
+                    dc.Moving();
                 }
                 else if (waterFlag == true)
                 {
@@ -136,7 +141,7 @@ public class PlayerSearch : MonoBehaviour {
                 obj = other.gameObject;
             }
         }
-        if (other.tag == "rock" && PC.player == PlayerControler.playerType.Dola)
+        if (other.tag == "rock"&& PC.player == PlayerControler.playerType.Dola)
         {
             CollisionFlag = true;
             RockFlag = true;
@@ -166,6 +171,12 @@ public class PlayerSearch : MonoBehaviour {
             CollisionFlag = true;
             KC = other.GetComponent<KeyContoller>();
             keyFlag = true;
+        }
+        if (other.gameObject.tag == "door")
+        {
+            CollisionFlag = true;
+            doorFlag = true;
+            obj = other.gameObject;
         }
     }
 
@@ -209,6 +220,11 @@ public class PlayerSearch : MonoBehaviour {
         {
             CollisionFlag = false;
             keyFlag = false;
+        }
+        if (collision.gameObject.tag == "door")
+        {
+            CollisionFlag = false;
+            doorFlag = false;
         }
     }
 }

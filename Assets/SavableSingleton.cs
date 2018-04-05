@@ -60,13 +60,13 @@ abstract public class SavableSingleton<T> where T : SavableSingleton<T>, new()
 
 	{
 
-		string json = JsonMapper.ToJson(Instance);
+		//string json = JsonMapper.ToJson(Instance);
 
-		json += "[END]"; // 復号化の際にPaddingされたデータを除去するためのデリミタの追記
+		//json += "[END]"; // 復号化の際にPaddingされたデータを除去するためのデリミタの追記
 
-		//      Debug.Log (json);
+		////      Debug.Log (json);
 
-		string crypted = Crypt.Encrypt(json);
+		//string crypted = Crypt.Encrypt(json);
 
 
 
@@ -86,7 +86,7 @@ abstract public class SavableSingleton<T> where T : SavableSingleton<T>, new()
 
 		BinaryWriter writer = new BinaryWriter(fileStream);
 
-		writer.Write(crypted);
+		//writer.Write(crypted);
 
 		writer.Close();
 
@@ -134,7 +134,7 @@ abstract public class SavableSingleton<T> where T : SavableSingleton<T>, new()
 
 				json = decrypted;
 
-				instance = JsonMapper.ToObject<T> (json);
+				//instance = JsonMapper.ToObject<T> (json);
 
 				reader.Close ();
 
@@ -168,7 +168,7 @@ abstract public class SavableSingleton<T> where T : SavableSingleton<T>, new()
 
 			{
 
-				sw.Write(JsonMapper.ToJson(Instance));
+				//sw.Write(JsonMapper.ToJson(Instance));
 
 			}
 

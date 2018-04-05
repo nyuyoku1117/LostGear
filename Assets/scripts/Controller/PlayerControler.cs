@@ -110,10 +110,12 @@ public class PlayerControler : MonoBehaviour
         if (player == playerType.Dola)
         {
             anim.SetBool("Dola", true);
+            WalkSpeed = 6f;
         }
         else
         {
             anim.SetBool("Dola", false);
+            WalkSpeed = 4f;
         }
 
         //デバッグ用ブレークポイント
@@ -238,30 +240,13 @@ public class PlayerControler : MonoBehaviour
 							rigidbody2D.velocity = new Vector2 (x * DashSpeed, rigidbody2D.velocity.y);
 						}
 						Vector2 temp = transform.localScale;
-						temp.x = x * 3;
+						temp.x = x * (-5);
 						transform.localScale = temp;
 						anim.SetBool ("Walk", true);
 					} else {
 						if (isLifted) {
 							LiftController LC = foot.Lift.GetComponent<LiftController> ();
 							rigidbody2D.velocity = new Vector2 (x * WalkSpeed + LC.rigidbody2D.velocity.x, LC.rigidbody2D.velocity.y);
-							//if (LC.LiftFlag == true)
-							//{
-							//    if (LC.XLift)
-							//    {
-							//        rigidbody2D.velocity = new Vector2(TotalSpeed, rigidbody2D.velocity.y);
-							//    }
-							//    else
-							//    {
-							//        TotalSpeed = x * WalkSpeed;
-							//        rigidbody2D.velocity = new Vector2(TotalSpeed, rigidbody2D.velocity.y);
-							//    }
-							//}
-							//else
-							//{
-							//    TotalSpeed = x * WalkSpeed;
-							//    rigidbody2D.velocity = new Vector2(TotalSpeed, rigidbody2D.velocity.y);
-							//}
 						} else if (isHashigo) {
 							rigidbody2D.velocity = new Vector2 (x * WalkSpeed, y * HashigoSpeed);
 						} else {
@@ -269,7 +254,7 @@ public class PlayerControler : MonoBehaviour
 						}
 
 						Vector2 temp = transform.localScale;
-						temp.x = x * 3;
+						temp.x = x * (-5);
 						transform.localScale = temp;
 						anim.SetBool ("Walk", true);
 					}
@@ -278,23 +263,6 @@ public class PlayerControler : MonoBehaviour
 				if (isLifted) {
 					LiftController LC = foot.Lift.GetComponent<LiftController> ();
 					rigidbody2D.velocity = new Vector2 (0 + LC.rigidbody2D.velocity.x, LC.rigidbody2D.velocity.y);
-
-					//if (LC.LiftFlag == true)
-					//{
-					//    TotalSpeed = LC.nowLiftSpeed;
-					//    if (LC.YLift)
-					//    {
-					//        rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y+TotalSpeed);
-					//    }
-					//    else
-					//    {
-					//        rigidbody2D.velocity = new Vector2(TotalSpeed, rigidbody2D.velocity.y);
-					//    }
-					//}
-					//else
-					//{
-					//    rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y);
-					//}
 				} else if (isHashigo) {
 					rigidbody2D.velocity = new Vector2 (x * WalkSpeed, y * HashigoSpeed);
 				} else {
@@ -303,7 +271,7 @@ public class PlayerControler : MonoBehaviour
 				anim.SetBool ("Walk", false);
 			}
 		} else {
-
+            
 			//MENU画面操作
 			if (menu_Active) {
 
@@ -434,7 +402,6 @@ public class PlayerControler : MonoBehaviour
 
 	}
 
-
     void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.name == "key(with gate)")
@@ -456,11 +423,6 @@ public class PlayerControler : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        //if (collision.gameObject.name == "Lift")
-        //{
-        //    isLifted = false;
-        //    Debug.Log("isLifted_OFF");
-        //}
     }
 
     void OnTriggerExit2D(Collider2D collision)

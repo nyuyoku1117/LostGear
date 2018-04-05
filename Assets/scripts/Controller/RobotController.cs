@@ -56,11 +56,9 @@ public class RobotController : MonoBehaviour {
 
 		if (hitToFoot.collider) {
 
-			if (hitToFoot.collider.gameObject.layer != 8) {
-
-				direction *= -1;
-
-			}
+			if (hitToFoot.collider==null) {
+                direction *= -1;
+            }
 
 		}
 

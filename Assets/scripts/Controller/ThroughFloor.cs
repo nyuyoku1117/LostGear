@@ -26,7 +26,7 @@ public class ThroughFloor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (PC.transform.position.y >= this.transform.position.y - 0.1f && PC.transform.position.y <= this.transform.position.y + 0.1f) {
+		if (PC.transform.position.y >= this.transform.position.y - 0.2f && PC.transform.position.y <= this.transform.position.y + 0.1f) {
             ChildBoxCollider.enabled = true;
 		} else {
             ChildBoxCollider.enabled = false;

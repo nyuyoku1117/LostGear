@@ -11,16 +11,12 @@ public class CameraController : MonoBehaviour {
 		offset = transform.position - player.transform.position;
 	}
 
-	void LateUpdate () {
-		if(transform.position.y>(-1)*10f){
-			Vector3 newPosition = transform.position;
-			newPosition.x = player.transform.position.x + offset.x;
-			newPosition.y = player.transform.position.y + offset.y;
-			newPosition.z = player.transform.position.z + offset.z;
-			transform.position = Vector3.Lerp(transform.position,newPosition,5.0f * Time.deltaTime);
-		}else{
-			Vector3 newPosition = transform.position;
-			transform.position = Vector3.Lerp(transform.position,newPosition,5.0f * Time.deltaTime);
-		}
-	}
+    void LateUpdate()
+    {
+        Vector3 newPosition = transform.position;
+        newPosition.x = player.transform.position.x + offset.x;
+        newPosition.y = player.transform.position.y + offset.y;
+        newPosition.z = player.transform.position.z + offset.z;
+        transform.position = Vector3.Lerp(transform.position, newPosition, 5.0f * Time.deltaTime);
+    }
 }
